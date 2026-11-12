@@ -1,0 +1,10 @@
+{
+  "float_acc_10k": 86.31,
+  "int8_sim_acc_10k": 86.28,
+  "float_acc_subset": 86.2,
+  "int8_sim_acc_subset": 86.0,
+  "n_subset": 2000,
+  "float_params": 70410,
+  "float_bytes": 281640,
+  "espdl_bytes": 84800
+}

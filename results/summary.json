@@ -1,0 +1,19 @@
+{
+  "cpu_mhz": 360,
+  "n_device": 2000,
+  "float_acc_host_10k": 86.31,
+  "int8_acc_host_10k": 86.28,
+  "float_acc_device": 86.2,
+  "int8_acc_device": 86.0,
+  "float_bytes": 281640,
+  "int8_espdl_bytes": 84800,
+  "int8_weight_bytes": 70410,
+  "float_ms": 99.9381,
+  "int8_ms": 5.485,
+  "int8_e2e_ms": 6.5121,
+  "int8_runtime_heap": 137652,
+  "size_ratio": 3.3212264150943396,
+  "speedup": 18.220255241567912,
+  "acc_drop_10k": 0.030000000000001137,
+  "acc_drop_device": 0.20000000000000284
+}

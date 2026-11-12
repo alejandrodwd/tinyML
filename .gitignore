@@ -1,0 +1,22 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Dataset (re-download with curl + scripts/prep_data.py)
+data/
+
+# ESP-IDF build output and downloaded components
+firmware/build/
+firmware/managed_components/
+firmware/sdkconfig
+firmware/sdkconfig.old
+
+# Large generated file (recreated by scripts/quantize.py)
+firmware/main/testset.bin
+
+# Logs
+artifacts/train.log
+
+# macOS
+.DS_Store

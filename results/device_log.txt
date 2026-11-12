@@ -1,0 +1,120 @@
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x17 (CHIP_USB_UART_RESET),boot:0xc (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4fc04294
+Core1 Saved PC:0x4fc058e0
+SPI mode:DIO, clock div:2
+load:0x4ff33ce0,len:0x1628
+load:0x4ff29ed0,len:0xfbc
+load:0x4ff2cbd0,len:0x3614
+entry 0x4ff29eda
+I (27) boot: ESP-IDF v5.5.6 2nd stage bootloader
+I (28) boot: compile time Nov 12 2026 12:59:59
+I (29) boot: chip revision: v1.3
+I (30) qio_mode: Enabling QIO for flash chip WinBond
+I (32) boot.esp32p4: SPI Speed      : 40MHz
+I (36) boot.esp32p4: SPI Mode       : QIO
+I (40) boot.esp32p4: SPI Flash Size : 16MB
+I (44) boot: Partition Table:
+I (46) boot: ## Label            Usage          Type ST Offset   Length
+I (53) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (59) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (66) boot:  2 factory          factory app      00 00 00010000 00c00000
+I (73) esp_image: segment 0: paddr=00010020 vaddr=401f0020 size=6528cch (6629580) map
+I (1024) esp_image: segment 1: paddr=006628f4 vaddr=30100000 size=00070h (   112) load
+I (1026) esp_image: segment 2: paddr=0066296c vaddr=4ff00000 size=0d6ach ( 54956) load
+I (1038) esp_image: segment 3: paddr=00670020 vaddr=40000020 size=1ee91ch (2025756) map
+I (1329) esp_image: segment 4: paddr=0085e944 vaddr=4ff0d6ac size=03820h ( 14368) load
+I (1333) esp_image: segment 5: paddr=0086216c vaddr=4ff10f00 size=02760h ( 10080) load
+I (1340) boot: Loaded app from partition at offset 0x10000
+I (1351) hex_psram: vendor id    : 0x0d (AP)
+I (1352) hex_psram: Latency      : 0x01 (Fixed)
+I (1352) hex_psram: DriveStr.    : 0x00 (25 Ohm)
+I (1353) hex_psram: dev id       : 0x03 (generation 4)
+I (1357) hex_psram: density      : 0x07 (256 Mbit)
+I (1362) hex_psram: good-die     : 0x06 (Pass)
+I (1366) hex_psram: SRF          : 0x02 (Slow Refresh)
+I (1371) hex_psram: BurstType    : 0x00 ( Wrap)
+I (1375) hex_psram: BurstLen     : 0x03 (2048 Byte)
+I (1380) hex_psram: BitMode      : 0x01 (X16 Mode)
+I (1384) hex_psram: Readlatency  : 0x04 (14 cycles@Fixed)
+I (1389) hex_psram: DriveStrength: 0x00 (1/1)
+I (1393) MSPI Timing: Enter psram timing tuning
+I (1565) esp_psram: Found 32MB PSRAM device
+I (1566) esp_psram: Speed: 200MHz
+I (1569) hex_psram: psram CS IO is dedicated
+I (1569) cpu_start: Multicore app
+I (2475) esp_psram: SPI SRAM memory test OK
+I (2485) cpu_start: GPIO 38 and 37 are used as console UART I/O pins
+I (2485) cpu_start: Pro cpu start user code
+I (2485) cpu_start: cpu freq: 360000000 Hz
+I (2487) app_init: Application information:
+I (2491) app_init: Project name:     tinycnn_bench
+I (2496) app_init: App version:      1
+I (2499) app_init: Compile time:     Nov 12 2026 13:00:04
+I (2504) app_init: ELF file SHA256:  ff25daa11...
+I (2509) app_init: ESP-IDF:          v5.5.6
+I (2513) efuse_init: Min chip rev:     v0.0
+I (2516) efuse_init: Max chip rev:     v1.99
+I (2521) efuse_init: Chip rev:         v1.3
+I (2525) heap_init: Initializing. RAM available for dynamic allocation:
+I (2531) heap_init: At 4FF1CD90 len 0001E230 (120 KiB): RETENT_RAM
+I (2537) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM
+I (2542) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM
+I (2547) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM
+I (2553) heap_init: At 30100070 len 00001F90 (7 KiB): SPM
+I (2558) esp_psram: Adding pool of 32768K of PSRAM memory to heap allocator
+I (2565) spi_flash: detected chip: generic
+I (2568) spi_flash: flash io: qio
+I (2572) sleep_gpio: Configure to isolate all GPIO pins in sleep state
+I (2578) sleep_gpio: Enable automatic switching of GPIO sleep configuration
+I (2585) main_task: Started on CPU0
+I (2585) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations
+I (2595) main_task: Calling app_main()
+BENCH_START cpu_mhz=360 n_test=2000
+FLOAT weights_bytes=281640 weights_internal=0 act_buf_internal=1
+float progress 500
+float progress 1000
+float progress 1500
+float progress 2000
+RESULT float correct=1724 n=2000 latency_us=99938.1
+W (225125) FbsLoader: The address of fbs model in flash is not aligned with 16 bytes.
+INT8 espdl_bytes=84800 runtime_heap_bytes=137652 in_shape=[1,32,32,3] in_exp=-6 in_dtype=3 out_dtype=3
+int8 progress 500
+int8 progress 1000
+int8 progress 1500
+int8 progress 2000
+RESULT int8 correct=1720 n=2000 latency_us=5485.0 e2e_us=6512.1
+BENCH_DONE
+I (240705) dl::Model: model:main_graph, version:0
+I (240715) dl::Model: +----------------------------------------+-------------------+---------+
+I (240715) dl::Model: |                            module summary                            |
+I (240725) dl::Model: +----------------------------------------+-------------------+---------+
+I (240735) dl::Model: | name                                   | type              | latency |
+I (240745) dl::Model: +----------------------------------------+-------------------+---------+
+I (240745) dl::Model: | total                                  |                   | 6052us  |
+I (240755) dl::Model: +----------------------------------------+-------------------+---------+
+I (240765) dl::Model: | /features/features.1/features.1.0/Conv | Conv              | 1492us  |
+I (240775) dl::Model: +----------------------------------------+-------------------+---------+
+I (240785) dl::Model: | /features/features.0/features.0.0/Conv | Conv              | 1253us  |
+I (240795) dl::Model: +----------------------------------------+-------------------+---------+
+I (240795) dl::Model: | /features/features.4/features.4.0/Conv | Conv              | 1174us  |
+I (240805) dl::Model: +----------------------------------------+-------------------+---------+
+I (240815) dl::Model: | /features/features.6/features.6.0/Conv | Conv              | 806us   |
+I (240825) dl::Model: +----------------------------------------+-------------------+---------+
+I (240835) dl::Model: | /features/features.3/features.3.0/Conv | Conv              | 622us   |
+I (240845) dl::Model: +----------------------------------------+-------------------+---------+
+I (240845) dl::Model: | /fc/Gemm                               | Gemm              | 286us   |
+I (240855) dl::Model: +----------------------------------------+-------------------+---------+
+I (240865) dl::Model: | /pool/GlobalAveragePool                | GlobalAveragePool | 130us   |
+I (240875) dl::Model: +----------------------------------------+-------------------+---------+
+I (240885) dl::Model: | /features/features.2/MaxPool           | MaxPool           | 113us   |
+I (240895) dl::Model: +----------------------------------------+-------------------+---------+
+I (240895) dl::Model: | PPQ_Operation_0                        | Transpose         | 110us   |
+I (240905) dl::Model: +----------------------------------------+-------------------+---------+
+I (240915) dl::Model: | /features/features.5/MaxPool           | MaxPool           | 33us    |
+I (240925) dl::Model: +----------------------------------------+-------------------+---------+
+I (240935) dl::Model: | /features/features.7/MaxPool           | MaxPool           | 19us    |
+I (240945) dl::Model: +----------------------------------------+-------------------+---------+
+I (240945) dl::Model: | /Flatten                               | Flatten           | 14us    |
+I (240955) dl::Model: +----------------------------------------+-------------------+---------+
